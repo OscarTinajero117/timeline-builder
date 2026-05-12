@@ -1,21 +1,52 @@
 <html>
-<head>
-    <link title="timeline-styles" rel="stylesheet" 
-              href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <head>
+    <link
+      title="timeline-styles"
+      rel="stylesheet"
+      href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css"
+    />
     <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="data.js"></script>
 
-    <script type="text/javascript" language="javascript" src="whitney.json"></script>
-    
     <script type="text/javascript">
-        $.getJSON("whitney.json", function (data) {
-                var timeline_json = data;
-            window.timeline = new TL.Timeline('timeline-embed', timeline_json);
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+        function createTimeline(data) {
+          window.timeline = new TL.Timeline("timeline-embed", data);
+        }
+
+        if (window.location.protocol === "file:") {
+          if (window.timelineData) {
+            createTimeline(window.timelineData);
+          } else {
+            console.error(
+              "No se encontró el fallback de datos para el timeline.",
+            );
+          }
+          return;
+        }
+
+        /* fetch("./assets/educacion-mexicana.json")
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error(
+                "Error cargando educacion-mexicana.json: " + response.statusText,
+              );
+            }
+            return response.json();
+          })
+          .then(function (data) {
+            createTimeline(data);
+          })
+          .catch(function (error) {
+            console.warn("Fetch falló, usando fallback local:", error);
+            if (window.timelineData) {
+              createTimeline(window.timelineData);
+            }
+          }); */
+      });
     </script>
-</head>
-<body>      
-    <div id='timeline-embed' style="width: 100%; height: 600px"></div>
-</body>
+  </head>
+  <body>
+    <div id="timeline-embed" style="width: 100%; height: 600px"></div>
+  </body>
 </html>
