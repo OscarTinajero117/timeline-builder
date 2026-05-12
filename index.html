@@ -15,12 +15,10 @@
 
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
-        // Validamos directamente si la variable timelineData existe
         if (window.timelineData) {
-          // Si existe, creamos el timeline
           window.timeline = new TL.Timeline("timeline-embed", window.timelineData);
         } else {
-          console.error("No se encontraron los datos para el timeline. Revisa data.js");
+          console.error("Datos no encontrados, revisar data.js");
         }
       });
     </script>
