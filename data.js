@@ -195,9 +195,9 @@ window.timelineData = {
     },
     {
       media: {
-        url: "",
-        caption: "",
-        credit: ""
+        url: "https://upload.wikimedia.org/wikipedia/commons/d/dc/Sector_de_juegos%2Cla_pulperia.jpg",
+        caption: "Sector de juegos.",
+        credit: "Wikimedia Commons"
       },
       start_date: {
         month: "11",
