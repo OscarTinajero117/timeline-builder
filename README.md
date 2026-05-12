@@ -4,7 +4,7 @@ Línea de tiempo sobre el derecho a la educación en México, construida con Tim
 
 Este proyecto esta basado en el repositorio de [timeline-builder](https://github.com/Digital-Humanities-Toolkit/timeline-builder)
 
-Constuido con un JSON de ejemplo y JS. [documentación](https://timeline.knightlab.com/docs/json-format.html)
+Constuido con un JSON dentro de un JS para que funcione igual en local como en línea. [documentación](https://timeline.knightlab.com/docs/json-format.html)
 
 Ver este ejemplo de [línea de tiempo](https://oscartinajero117.github.io/timeline-builder/)
 
