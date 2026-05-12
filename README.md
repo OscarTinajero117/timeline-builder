@@ -1,20 +1,11 @@
-## Timeline Builder
+# Timeline Builder
 
-Use Timeline.js to build a timeline! With thanks to the Knight Lab at [NorthWestern University](https://timeline.knightlab.com/).
+Línea de tiempo sobre el derecho a la educación en México, construida con Timeline.js, esta línea de tiempo muestra antecedentes constitucionales que abarcan desde la Constitución de 1857 hasta la actualidad, destacando los años 1857, 1917, 1934, 1946, 1980, 1992 y 1993.
 
-While you can use a spreadsheet to build your timeline as per the docs, here's a sample of how to build your timeline using JSON.
+Este proyecto esta basado en el repositorio de [timeline-builder](https://github.com/Digital-Humanities-Toolkit/timeline-builder)
 
-Run this website locally:
+Constuido con un JSON de ejemplo y JS. [documentación](https://timeline.knightlab.com/docs/json-format.html)
 
-1. Make sure you have Node.js installed.
-2. Fork this repo and place it on your local machine in a folder.
-3. Using the command line, CD (change directory) to the folder: `cd myTimeline`.
-4. Use `http-server` to quickly start up a local server; from your code's folder run `npx http-server`. You should see a timeline of Whitney Houston's amazing and tragic life.
+Ver este ejemplo de [línea de tiempo](https://oscartinajero117.github.io/timeline-builder/)
 
-Build your own JSON structures for a new timeline, [following the docs](https://timeline.knightlab.com/docs/json-format.html).
-
-View this example [timeline](https://digital-humanities-toolkit.github.io/timeline-builder/)
-
-![timeline sample](timeline-example.png)
-
-
+![ejemplo](timeline-example.png)
