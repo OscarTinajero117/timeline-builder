@@ -1,5 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="es-419">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea del Tiempo</title>
+    
     <link
       title="timeline-styles"
       rel="stylesheet"
@@ -10,39 +15,13 @@
 
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
-        function createTimeline(data) {
-          window.timeline = new TL.Timeline("timeline-embed", data);
+        // Validamos directamente si la variable timelineData existe
+        if (window.timelineData) {
+          // Si existe, creamos el timeline
+          window.timeline = new TL.Timeline("timeline-embed", window.timelineData);
+        } else {
+          console.error("No se encontraron los datos para el timeline. Revisa data.js");
         }
-
-        if (window.location.protocol === "file:") {
-          if (window.timelineData) {
-            createTimeline(window.timelineData);
-          } else {
-            console.error(
-              "No se encontró el fallback de datos para el timeline.",
-            );
-          }
-          return;
-        }
-
-        /* fetch("./assets/educacion-mexicana.json")
-          .then(function (response) {
-            if (!response.ok) {
-              throw new Error(
-                "Error cargando educacion-mexicana.json: " + response.statusText,
-              );
-            }
-            return response.json();
-          })
-          .then(function (data) {
-            createTimeline(data);
-          })
-          .catch(function (error) {
-            console.warn("Fetch falló, usando fallback local:", error);
-            if (window.timelineData) {
-              createTimeline(window.timelineData);
-            }
-          }); */
       });
     </script>
   </head>
